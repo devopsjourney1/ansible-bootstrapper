@@ -16,7 +16,7 @@ cd ansible-bootstrapper
 
 2. Run the playbooks of your choice. e.g. tools/docker
 ```
-ansible-playbook -i inventory/hosts.ini playbooks/install-tools.yaml -l local
-ansible-playbook -i inventory/hosts.ini playbooks/install-docker.yaml -l local
+ansible-playbook playbooks/install-tools.yaml
+ansible-playbook playbooks/install-docker.yaml
 ```
 

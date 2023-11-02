@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   become: true
   tasks:
   - name: Install pre-req packages
@@ -20,8 +20,8 @@
   - name: Install Docker
     apt: 
       name: 
-      - docker.io
-      state: 24.0.5
+      - docker.io=24.0.5
+      state: present
       update_cache: yes
 
   - name: Ensure group "docker" exists with correct gid
