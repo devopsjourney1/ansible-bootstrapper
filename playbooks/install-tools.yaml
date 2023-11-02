@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Install packages
+    package:
+      name:
+        - nmon
+        - dstat
+      state: present
+      update_cache: yes
