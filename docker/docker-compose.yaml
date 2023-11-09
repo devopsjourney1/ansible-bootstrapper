@@ -1,0 +1,18 @@
+services:
+  web:
+    image: "$IMAGE_URI:$IMAGE_TAG"
+    ports:
+      - "80:3000"
+    depends_on:
+      - redis
+    environment:
+      - BACKGROUND_COLOR=#a8d1df
+      - APP_NAME=Dockerized App
+      - CUSTOM_TEXT=Deployed with Docker Compose!
+  redis:
+    image: "redis:alpine"
+    volumes:
+      - redis-data:/data
+    
+volumes:
+  redis-data:
