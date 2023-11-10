@@ -20,9 +20,8 @@
   - name: Install Docker
     apt: 
       name:
-      # Note: You can use docker-ce instead, but that would require differnt apt repo setup
-      - docker.io
-      - docker-compose
+        - docker.io
+        - docker-compose
       state: present
       update_cache: yes
 
